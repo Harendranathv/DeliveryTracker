@@ -1,5 +1,5 @@
- deliveryApp.controller('myDeliveryTracker',function($scope) {
-    $scope.userName = "Eswar Palaparthi";
+ deliveryApp.controller('myDeliveryTracker', function($scope) {
+    $scope.userName = "Soumya Mohanty";
 	$scope.checkvalue=false;
 	$scope.Deliveryobject={
 	   taskName:"",
@@ -25,7 +25,7 @@
 	      impact:'',
 	      havedone:'',
 	      helpneed:''
-	   };
+	};
 	$scope.checkedradiovalue='';
 	$scope.blockercolor='#ffffff';
 	$scope.ontimecolor='#ffffff';
@@ -71,30 +71,30 @@
 	}];
 	$scope.sample = [{
 
-key: 'Yes',
+		key: 'Yes',
 
-value: 'Yes'
+		value: 'Yes'
 
-}, {
+		}, {
 
-key: 'No',
+		key: 'No',
 
-value: 'No'
+		value: 'No'
 
-}, {
+		}, {
 
-key: 'Maybe',
+		key: 'Maybe',
 
-value: 'Maybe'
+		value: 'Maybe'
 
-},
-{
+		},
+		{
 
-key: 'NA',
+		key: 'NA',
 
-value: 'NA'
+		value: 'NA'
 
-}];
+	 }];
 
 $scope.blockerchange=function(blocker,id){
 	 $scope.Deliveryobject.blocker=blocker;
