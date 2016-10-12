@@ -44,5 +44,10 @@
   },
   "scripts": {
     "start": "node server.js"
+  },
+  "devDependencies": {
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-watch": "^1.0.0"
   }
 }

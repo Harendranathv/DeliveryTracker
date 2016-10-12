@@ -21,10 +21,45 @@
         <script src="lib/bootstrap-datetimepicker.min.js"></script>
     </head>
     <body id="my-login-app">
+        <div class="container-fluid">
+            <header>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img src="images/Logo-Original.png" class="image-logo" alt="Cinque Terre">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <div class="tag-heading">
+                        <h3 class="media-heading">Delivery Milestone Tracker</h3>
+                    </div>
+                    <div class="profile-heading">
+                        <span class="user-name">Soumya Mohanty</span>
+                        <span class="separator">|</span>
+                        <span><a>logout</a></span>
+                    </div>
+                  </div>
+                </div>
+            </header>
+        </div>
         <div ui-view></div>
         <script src="lib/angular.js"></script>
         <script src="lib/angular-ui-router.js"></script>
         <script src="app.js"></script>
         <script type="text/javascript" src="modules/reportee/reporteeController.js"></script>
+        <script type="text/javascript">
+            function mobile() {
+                if ($(window).width()<768) {
+                    $('.tag-heading').insertAfter('.media');
+                } else {
+                    $('.tag-heading').insertAfter('.profile-heading');
+                }
+            }
+
+            $(window).resize(function() {
+                mobile();
+            });
+            mobile();
+        </script>
     </body>
 </html>
