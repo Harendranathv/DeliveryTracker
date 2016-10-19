@@ -1,76 +1,16 @@
-<!DOCTYPE html>
-<html ng-app="deliveryTracker">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="HandheldFriendly" content="true">
-        <title>Delivery Tracker</title>
-        <link rel="shortcut icon" href="images/favicon.ico" />
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
-        <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
-        <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
-        <!--Custom styles-->
-        <link rel="stylesheet" href="css/style.css" />
-        <script src="lib/jquery.min.js"></script>
-        <script src="lib/bootstrap.min.js"></script>
-        <script src="lib/moment.min.js"></script>
-        <script src="lib/bootstrap-datepicker.min.js"></script>
-        <script src="lib/bootstrap-datetimepicker.min.js"></script>
-    </head>
-    <body id="my-login-app">
-        <div class="container-fluid">
-            <header>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#">
-                      <img src="images/Logo-Original.png" class="image-logo" alt="Cinque Terre">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <div class="tag-heading">
-                        <h3 class="media-heading">Delivery Milestone Tracker</h3>
-                    </div>
-                    <div class="profile-heading">
-                        <span class="user-name">Soumya Mohanty</span>
-                        <span class="separator">|</span>
-                        <span><a>logout</a></span>
-                    </div>
-                  </div>
-                </div>
-            </header>
+<div class="col-md-6 col-md-offset-3" ng-controller = "loginCtrl">
+    <form name="form" ng-submit="login()" role="form">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" class="form-control" ng-model="user.name" required />
         </div>
-        <div ui-view></div>
-        <script src="lib/angular.js"></script>
-        <script src="lib/angular-ui-router.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
-    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.2.0.js"></script>
-        <script src="app.js"></script>
-        
-        <!--Controllers-->
-        <script type="text/javascript" src="modules/reportee/reporteeController.js"></script> 
-        <script type="text/javascript" src="modules/login/loginController.js"></script>
-        <script type="text/javascript" src="modules/reportee/blocker_modal.js"></script>
-        
-        <!--Services-->
-        <script type="text/javascript" src="modules/login/loginService.js"></script>
-        <script type="text/javascript">
-            function mobile() {
-                if ($(window).width()<768) {
-                    $('.tag-heading').insertAfter('.media');
-                } else {
-                    $('.tag-heading').insertAfter('.profile-heading');
-                }
-            }
-
-            $(window).resize(function() {
-                mobile();
-            });
-            mobile();
-        </script>
-    </body>
-</html>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" ng-model="user.password" required />
+        </div>
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">Login</button>
+        </div>
+    </form>
+    <span ng-show="errorLogin" class="text-danger">Invalid Username or Password</span>
+</div>
