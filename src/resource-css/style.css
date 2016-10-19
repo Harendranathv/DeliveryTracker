@@ -332,3 +332,12 @@ option:checked {
   font-size: 7px;
   top: -7px;
 }
+
+
+.status-button:hover {
+  background-color: none;
+  background-position: 0;
+}
+.status-button:focus {
+  background-color: #398439;
+}
