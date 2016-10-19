@@ -222,4 +222,8 @@ $scope.enabledsubmit = function(dropvalue,ids)
 		 //}
 	  console.log("data"+JSON.stringify($scope.Deliveryobject));
   };
+     
+//Soumya
+     
+     $scope.isActive = true;
 });

@@ -4,28 +4,23 @@
                 <table class="table table-striped table-bordered">
                     <thead class="heading">
                         <tr >
-                            <th></th>
-                            <th>Name</th>
                             <th>Task ID</th>
-                            <th>Task</th>
+                            <th>Description</th>
                             <th>Delivery Date</th>
                             <th>Blocker</th>
                             <th>On Time Delivery</th>
-                            <th>Quality Delivery</th>
+                            <th>Quality Delivery</th>                            
+                            <th>Sprint Deleivery Date</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr ng-repeat="tbrow in tabledatarepeat">
-                            <td><span ><input type="radio" id="{{tbrow.taskId}}" ng-model="checkedradiovalue" name="radioname" class="checkbox" ng-click="selectcheckbox(checkedradiovalue)" ng-value="{{tbrow.taskId}}"/></span>
-                            </td>
-                            <td data-title="Name">
-                                <input ng-model="tbrow.taskName" class="form-control" disabled/>
-                            </td>
+                            
                             <td data-title="Task ID">
                                 <input  ng-model="tbrow.taskId" class="form-control" disabled/>
-                            </td>
-                            <td data-title="Task">
-                                <textarea ng-model="tbrow.taskDetails" class="form-control" disabled></textarea>
+                            </td>                            
+                            <td data-title="Description">
+                                <input ng-model="tbrow.taskName" class="form-control" disabled/>
                             </td>
                             <td data-title="Delivery Date">
                                 <input  ng-model="tbrow.taskdeldate" class="form-control" disabled/>
@@ -44,6 +39,10 @@
                                 <select id="qualitydelivery" ng-model="tbrow.QualityDelivery" ng-options="s.value as s.key for s in sample" name="blocker" class="sel-box sel-blocker form-control" ng-change=onqualitydelivery(tbrow.QualityDelivery,tbrow.taskId) ng-class="deliverycolor" data-title="Name">
                                     <option value="">Select</option>
                                 </select>
+                            </td>
+                            
+                            <td data-title="Sprint Delivery Date">
+                                <input  ng-model="tbrow.taskdeldate" class="form-control" disabled/>
                             </td>
                         </tr>
                     </tbody>
@@ -113,6 +112,7 @@
             </form>
         </div>
         <div class="heading-align">
+            <button type="submit" class="btn btn-primary" value="Add Task" ng-click="addTask()" >AddTask</button>
             <button type="submit" class="btn btn-primary" value="Submit" ng-disabled="submitdisabled" ng-click="Submitdata()" ng-show="button1">Submit</button>
             <button type="submit" class="btn btn-primary" value="Submit" ng-disabled="newDiscoveryForm.$invalid" ng-click="Submitdata(issuedetail)" ng-show="button2">Submit</button>
         </div>
