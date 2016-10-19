@@ -11,9 +11,10 @@
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
-        <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
         <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+        <!--Custom styles-->
+        <link rel="stylesheet" href="css/style.css" />
         <script src="lib/jquery.min.js"></script>
         <script src="lib/bootstrap.min.js"></script>
         <script src="lib/moment.min.js"></script>
@@ -45,8 +46,18 @@
         <div ui-view></div>
         <script src="lib/angular.js"></script>
         <script src="lib/angular-ui-router.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.2.0.js"></script>
         <script src="app.js"></script>
-        <script type="text/javascript" src="modules/reportee/reporteeController.js"></script>
+        
+        <!--Controllers-->
+        <script type="text/javascript" src="modules/reportee/reporteeController.js"></script> 
+        <script type="text/javascript" src="modules/login/loginController.js"></script>
+        <script type="text/javascript" src="modules/reportee/blocker_modal.js"></script>
+        
+        <!--Services-->
+        <script type="text/javascript" src="modules/login/loginService.js"></script>
         <script type="text/javascript">
             function mobile() {
                 if ($(window).width()<768) {

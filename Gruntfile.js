@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                     cleancss: true
                 },
                 files: {
-                    'src/resource-css/style.css': 'src/less/style.less'// destination to source
+                    'src/resource-css/style.css': 'src/**/*.less'// destination to source
                 }
             }
         },
@@ -125,5 +125,5 @@ module.exports = function(grunt) {
 
     });
     grunt.registerTask('default', ['connect:server']);
-    grunt.registerTask('server', ['clean', 'jshint', 'less', 'copy', 'connect:server', 'watch']);
+    grunt.registerTask('server', ['clean', 'jshint', 'less', 'copy', 'watch']);
 };
