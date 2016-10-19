@@ -1,7 +1,7 @@
 var mongoose        = require('mongoose');              // mongoose for mongo
 
 // configuration ==================
-mongoose.connect('mongodb://localhost:27017/demoDb');
+mongoose.connect('mongodb://<soumya>:<soumya>@ds033056.mlab.com:33056/demo_soumya');
 /*
    * MongoDB port is 27017 by default.
    * Assuming you have created mongoDB database named "demoDb".
